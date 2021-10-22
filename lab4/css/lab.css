@@ -10,8 +10,17 @@ p{
   margin-left: 10px;
 }
 
+body{
+  background-color: #FECED8;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 #content {
-  background-color: #b4ff8f;
+  background-color: #FECED8;
   width: 500px;
   min-height: 300px;
   padding: 10px;
