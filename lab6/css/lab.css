@@ -1,0 +1,35 @@
+h1 {
+  color: #079756
+;
+  font-size: 200%;
+}
+
+p{
+  color: #103C5A;
+  font-family: sans-serif;
+  text-indent: 20px;
+  margin-left: 10px;
+}
+
+body{
+  background-color: #CCFFFC;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+script{
+  color: #103C5A;
+  font-family: sans-serif;
+  text-indent: 20px;
+  margin-left: 10px;
+}
+
+#content {
+  width: 1500px;
+  min-height: 300px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 20px;
