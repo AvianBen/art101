@@ -4,29 +4,67 @@
 * License: Public Domain
 **/
 
-let nums = [1,4,5,8,12,26,200,1001];
-console.log("My array of nums: ", nums);
+  //Output
 
-//squares any number put into function
-function numSquared(x){
-    let results = x * x;
-    return results;
-}
+  document.getElementById("button").addEventListener("click", function(){
+    let userName = document.getElementById("user-name").value;
+    console.log(userName);
 
-//test numsSquared
-console.log("Square this: ", nums[2], "\n", numSquared(nums[2]));
-console.log("Square this: ", nums[6], "\n", numSquared(nums[6]));
+    //split string into char array
+    let nameArray = userName.split('');
 
-let result = nums.map(numSquared);
-//should return all of the numbers in the array squared
-console.log("The array of nums squared: ", result);
+    for(let i = nameArray.length - 1; i > 0; i--) {
+      let x = Math.floor(Math.random() * (i+1));
+      let temp = nameArray[i];
+      nameArray[i] = nameArray[x];
+      nameArray[x] = temp;
+    }
 
-let results = nums.map(function(x){
-    return x - 5;
-})
+    let nameUnsorted = nameArray.join("");
 
-//should return all of the numbers in the array minus five
-console.log("The array of nums minus five: ", results);
+    document.getElementById("output1").innerHTML = "Your name unsorted: " + nameUnsorted;
+  });
 
-let outputEl = document.getElementById("output");
-outputEl.innerHTML = console.log("My original array of nums: ", nums, "\n","The array of nums squared: ", result,"\n","The array of nums minus five: ", results)
+  document.getElementById("button").addEventListener("click", function(){
+    let userName = document.getElementById("user-name2").value;
+    console.log(userName);
+
+    //split string into char array
+    let nameArray = userName.split('');
+    //sort array
+    let nameArraySort = nameArray.sort();
+    //join array back to a string
+    let nameSorted = nameArraySort.join('');
+
+    document.getElementById("output2").innerHTML = "Your friend's name sorted: " + nameSorted;
+  });
+
+  document.getElementById("button").addEventListener("click", function(){
+    let userName = document.getElementById("user-name3").value;
+    console.log(userName);
+
+    //split string into char array
+    let nameArray = userName.split('');
+    //sort array
+    let nameArraySort = nameArray.sort();
+    //join array back to a string
+    let nameSorted = nameArraySort.join('');
+
+    document.getElementById("output3").innerHTML = "Your mom's name sorted: " + nameSorted;
+  });
+
+  document.getElementById("button2").addEventListener("click", function(){
+
+    document.getElementById("content").style.color = "blue";
+
+  });
+
+  document.getElementById("button3").addEventListener("click", function(){
+
+    document.getElementById("content").style.fontVariant = "small-caps";
+
+  });
+
+  setTimeout(function(){
+  document.getElementById("content").style.fontSize = "x-large";
+}, 3000);

@@ -1,27 +1,30 @@
 h1 {
-  color: #079756
-;
-  font-size: 200%;
+  color: #181D31;
+  font-size: 150%;
 }
 
 p{
-  color: #103C5A;
+  color: #181D31;
   font-family: sans-serif;
   text-indent: 20px;
   margin-left: 10px;
 }
 
 body{
-  background-color: #CCFFFC;
+  background-color: #94B3FD;
 }
 
 img{
-  max-width: 100%;
+  max-width: 75%;
   height: auto;
 }
 
+div{
+  white-space: pre-wrap;
+}
+
 script{
-  color: #103C5A;
+  color: #683355;
   font-family: sans-serif;
   text-indent: 20px;
   margin-left: 10px;
@@ -33,3 +36,15 @@ script{
   padding: 10px;
   margin: 10px;
   font-size: 20px;
+
+}
+
+#output{
+  color: #181D31;
+  font-family: sans-serif;
+  font-size: 30px;
+}
+
+#button{
+
+}
