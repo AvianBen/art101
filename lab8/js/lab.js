@@ -18,15 +18,21 @@ console.log("Square this: ", nums[2], "\n", numSquared(nums[2]));
 console.log("Square this: ", nums[6], "\n", numSquared(nums[6]));
 
 let result = nums.map(numSquared);
-//should return all of the numbers in the array squared
+//return all of the numbers in the array squared
 console.log("The array of nums squared: ", result);
 
 let results = nums.map(function(x){
     return x - 5;
-})
+});
 
 //should return all of the numbers in the array minus five
 console.log("The array of nums minus five: ", results);
 
+//get location of output in HTML and create mapResults
+mapResults = "Original Array: " + nums + "<br><br>" + "Squared Array: " + result + "<br><br>" + "Original Array minus 5: " + results + "<br><br>";
+
+console.log(mapResults);
+
 let outputEl = document.getElementById("output");
-outputEl.innerHTML = console.log("My original array of nums: ", nums, "\n","The array of nums squared: ", result,"\n","The array of nums minus five: ", results)
+
+outputEl.innerHTML = mapResults;

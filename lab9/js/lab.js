@@ -30,10 +30,6 @@ outputEl.appendChild(new5El);
 //renames the node
 document.renameNode(outputEl, null, "OUTPUTEL");
 
-//displays actively selected element
-let new6El = document.activeElement.tagName;
-outputEl.appendChild(new6El);
-
 console.log(outputEl.childNodes);
 
 //append to HTML
