@@ -3,23 +3,27 @@
 * Created: October 25th 2021
 * License: Public Domain
 **/
-var catURL = "https://cataas.com/cat?json=true";
+var comicURL = "https://xkcd.com/info.0.json";
 
 $("#activate").click(callAjax);
 
 function callAjax() {
 // Using the core $.ajax() method
   $.ajax({
-      url: catURL,
+      url: comicURL,
 
       type: "GET",
 
       dataType : "json",
+
+      crossDomain: true
     })
     .done(function(data) {
-      var imgUrl = "https://cataas.com" + data.url;
+      var titleTxt = data.title;
+      $("#title").html(titleTxt);
+      var imgUrl = data.img;
       var imgTag = "<img src=" + imgUrl + ">";
-      $("#output").html(imgTag);
+      $("#comic").html(imgTag);
 
     })
       // What we do if the api call fails
